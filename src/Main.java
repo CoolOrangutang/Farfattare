@@ -33,16 +33,24 @@ public class Main
 
         for (int i = 0; i < antalFörfattare; i++){
 
-            Scanner inputScanner = new Scanner(System.in);
-            System.out.println("What is the author name: ");
-            String name = inputScanner.nextLine();
+            String name;
+
+            try{
+                Scanner inputScanner = new Scanner(System.in);
+                System.out.println("What is the author name: ");
+                name = inputScanner.nextLine();
+            }catch (Exception e){
+                name = "Unknown";
+            }
+
 
 
             Author author = new Author(name, "gwperson@gmail.com", 'm');
-            System.out.println(author.getName() +" , "+ author.getEmail() +" , "+ author.getGender());
+            System.out.println(author);
 
         }
 
     }
 
 }
+

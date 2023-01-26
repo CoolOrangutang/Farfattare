@@ -13,6 +13,11 @@ public class Author {
 
     }
 
+    @Override
+    public String toString(){
+        return name +" , "+ gender +" , "+ email;
+    }
+
     public String getEmail() {
         return email;
     }
